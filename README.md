@@ -1,5 +1,6 @@
 # ml-medicine
 🚀 Использование моделей (Inference)
+
 Для работы моделей необходим Python 3.8+ и библиотеки: pandas, joblib, catboost, xgboost.
 1. 🧬 Pancreatic Cancer Model (pancreatic_cancer_model.joblib)
 Модель для предсказания риска рака поджелудочной железы (Binary Classification).

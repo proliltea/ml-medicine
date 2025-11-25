@@ -50,11 +50,15 @@ code
 Python
 # df - DataFrame с сырыми данными
 # 1. Создание признака ap_diff
+
 df['ap_diff'] = df['ap_hi'] - df['ap_lo']
 
 # 2. Удаление лишнего (если есть id)
+
 if 'id' in df.columns: df = df.drop(columns=['id'])
 
 # 3. Предсказание (Рекомендуемый порог 0.45 для Recall)
+
 probs = model.predict_proba(df)[:, 1]
+
 result = (probs > 0.45).astype(int)
